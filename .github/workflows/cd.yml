@@ -14,6 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+      - name: Verify Heroku Stack
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+          heroku stack -a smart-ai-meal-planner
+      
       - name: Build and push
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
