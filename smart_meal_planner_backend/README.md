@@ -3,7 +3,7 @@
 [![CI Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml)
 [![CD Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml)
 
-A FastAPI-based backend for the Smart AI Meal Planner application. Built with modern Python and best practices for scalability and maintainability.
+A production-ready FastAPI backend for the Smart AI Meal Planner application. Built with modern Python and best practices for scalability and maintainability.
 
 ## Deployment Status
 [![CD Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml)
