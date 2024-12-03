@@ -25,21 +25,33 @@ jobs:
         with:
           python-version: '3.12'
           
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
           
-      - name: Run tests with coverage
+      - name: Run Python tests with coverage
         run: |
           pytest --cov=smart_meal_planner_backend tests/ --cov-report=xml
+          
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install Node.js dependencies
+        run: npm ci
+        
+      - name: Run Jest tests with coverage
+        run: npm test
           
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ env.CODECOV_TOKEN }}
-          files: ./coverage.xml
+          files: ./coverage.xml,./coverage/coverage-final.json
           fail_ci_if_error: true
           
       - name: Deploy to Render

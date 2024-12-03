@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "lcov", "text", "clover"],
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node",
+    "testMatch": ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js"]
+  }
+}
