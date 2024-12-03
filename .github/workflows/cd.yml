@@ -1,6 +1,9 @@
 name: CD Pipeline
 
 on:
+  push:
+    branches:
+      - main
   workflow_run:
     workflows: [CI Pipeline]
     types: [completed]
@@ -13,8 +16,10 @@ permissions:
 jobs:
   deploy:
     if: |
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.head_branch == github.event.repository.default_branch
+      github.event_name == 'push' ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == github.event.repository.default_branch)
     runs-on: ubuntu-latest
     environment: production
     concurrency: smart-ai-meal-planner
