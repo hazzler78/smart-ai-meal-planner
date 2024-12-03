@@ -1,4 +1,5 @@
 pytest==7.4.3
 pytest-cov==4.1.0
 pytest-asyncio==0.21.1
-httpx==0.25.1  # Required for FastAPI TestClient 
+httpx==0.25.1  # Required for FastAPI TestClient
+psycopg2-binary==2.9.9
