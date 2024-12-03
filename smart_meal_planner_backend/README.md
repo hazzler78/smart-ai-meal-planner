@@ -3,15 +3,15 @@
 [![CI Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml)
 [![CD Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml)
 
-A production-ready FastAPI backend for the Smart AI Meal Planner application. Built with modern Python and best practices for scalability, maintainability, and security. Deployed on Heroku EU region with protected environments, dual-trigger CI/CD pipeline, and optimized pip caching.
+A production-ready FastAPI backend for the Smart AI Meal Planner application. Built with modern Python and best practices for scalability, maintainability, and security. Deployed on Render with protected environments and optimized pip caching.
 
 ## Deployment Status
 [![CD Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml)
 
 ## Live API Endpoints
-- Base URL: https://smart-ai-meal-planner.herokuapp.com
-- Interactive Docs: https://smart-ai-meal-planner.herokuapp.com/docs
-- API Reference: https://smart-ai-meal-planner.herokuapp.com/redoc
+- Base URL: https://smart-ai-meal-planner.onrender.com
+- Interactive Docs: https://smart-ai-meal-planner.onrender.com/docs
+- API Reference: https://smart-ai-meal-planner.onrender.com/redoc
 
 ## Setup & Development
 
