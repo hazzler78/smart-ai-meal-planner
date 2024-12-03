@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: smart_meal_planner_backend
+Version: 0.1
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+Requires-Dist: httpx

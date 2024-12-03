@@ -1,0 +1,2 @@
+smart_meal_planner_backend
+tests

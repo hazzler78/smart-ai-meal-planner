@@ -1,0 +1,5 @@
+fastapi
+sqlalchemy
+pytest
+python-dotenv
+httpx
