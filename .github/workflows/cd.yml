@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'smart_meal_planner_backend/**'
+      - '.github/workflows/cd.yml'
 
 jobs:
   deploy:
@@ -13,13 +16,8 @@ jobs:
       url: https://smart-ai-meal-planner-5e9f02da078d.herokuapp.com
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Verify Heroku Stack
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: |
-          curl https://cli-assets.heroku.com/install.sh | sh
-          heroku stack -a smart-ai-meal-planner
+        with:
+          fetch-depth: 0
       
       - name: Build and push
         uses: akhileshns/heroku-deploy@v3.12.12
@@ -30,3 +28,4 @@ jobs:
           usedocker: true
           appdir: "smart_meal_planner_backend"
           docker_heroku_process_type: "web"
+          healthcheck: "https://smart-ai-meal-planner-5e9f02da078d.herokuapp.com/health"
