@@ -1,5 +1,8 @@
 # Smart AI Meal Planner Backend
 
+[![CI Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/ci.yml)
+[![CD Pipeline](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml/badge.svg)](https://github.com/hazzler78/smart-ai-meal-planner/actions/workflows/cd.yml)
+
 A FastAPI-based backend for the Smart AI Meal Planner application.
 
 ## Deployment Status
